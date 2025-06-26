@@ -14,11 +14,24 @@ public class _002_Max_Subarray_Sum {
     private static int optimal(int[] nums) {
         int maxSum = Integer.MIN_VALUE;
         int sum = 0;
-        for (int num : nums) {
-            sum += num;
-            maxSum = Math.max(maxSum, sum);
-            sum = Math.max(sum, 0);
+        int startIndex = -1, endIndex = -1, start = -1;
+        for (int i=0; i< nums.length; i++) {
+            // start index will always be where sum was zero
+            if(sum == 0){
+                start = i;
+            }
+            sum += nums[i];
+            if(sum > maxSum){
+                maxSum = sum;
+                // saving start and end index every time we have new max sum
+                startIndex = start;
+                endIndex = i;
+            }
+            if(sum < 0){
+                sum = 0;
+            }
         }
+        System.out.println("startIndex: " + startIndex + ", endIndex: " + endIndex);
         return maxSum;
     }
 
