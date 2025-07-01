@@ -1,10 +1,11 @@
 ## 📘 Problem Progress Tracker
 
-| #   | Topic   | Problem                           | File Path                                          | LeetCode Link                                  | Solved | Crushed | Date Solved |
-|-----|---------|-----------------------------------|----------------------------------------------------|------------------------------------------------|-------|-------|-------------|
-| 001 | Arrays  | Longest Subarray with Sum K       | `arrays/_001_Longest_Subarray_With_Sum_K.java`     | [🔗](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | ✅    | ❌     | 2025-06-23  |
-| 002 | Arrays  | Max Subarray Sum                  | `arrays/_002_Max_Subarray_Sum.java`                | [🔗](https://leetcode.com/problems/maximum-subarray/) | ✅     | ❌     | 2025-06-24  |
-| 003 | Arrays  | Best Time to Buy and Sell Stock   | `arrays/_003_Best_Time_to_Buy_and_Sell_Stock.java` | [🔗](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | ✅     | ✅     | 2025-06-30  |
+| #   | Topic   | Problem                         | File Path                                          | LeetCode Link                                  | Solved | Crushed | Date Solved | Tags        |
+|-----|---------|---------------------------------|----------------------------------------------------|------------------------------------------------|-------|-------|-------------|-------------|
+| 001 | Arrays  | Longest Subarray with Sum K     | `arrays/_001_Longest_Subarray_With_Sum_K.java`     | [🔗](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | ✅    | ❌     | 2025-06-23  |             |
+| 002 | Arrays  | Max Subarray Sum                | `arrays/_002_Max_Subarray_Sum.java`                | [🔗](https://leetcode.com/problems/maximum-subarray/) | ✅     | ❌     | 2025-06-24  |             |
+| 003 | Arrays  | Best Time to Buy and Sell Stock | `arrays/_003_Best_Time_to_Buy_and_Sell_Stock.java` | [🔗](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | ✅     | ✅     | 2025-06-30  |             |
+| 004 | Arrays  | Container With Most Water       | `arrays/_004_Container_With_Most_Water.java`       | [🔗](https://leetcode.com/problems/container-with-most-water/) | ✅     | ✅     | 2025-07-31  | Two Pointer |
 
 <details>
 <summary><strong>🧠 Intuition for #001: Longest Subarray with Sum K</strong></summary>
@@ -41,4 +42,13 @@ Reset the sum to zero when it becomes negative, and update the maximum sum and i
 **Optimal:**  
 Maintain the minimum price seen so far while iterating through the array, and at each step, calculate the current profit. 
 Update the maximum profit whenever the current profit exceeds it.
+</details>
+
+<br>
+
+<details>
+<summary><strong>🧠 Intuition for #004: Container With Most Water</strong></summary>
+
+**Optimal:**  
+Use two pointers left and right, move the pointer whose height is less. For each step find the water that can be stored. 
 </details>
