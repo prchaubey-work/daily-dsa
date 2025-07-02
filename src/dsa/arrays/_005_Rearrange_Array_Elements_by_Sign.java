@@ -29,7 +29,7 @@ public class _005_Rearrange_Array_Elements_by_Sign {
     }
 
     /**
-     *
+     * time O(2n) space O(2n)
      * when # of +ve and -ve are not equal
      */
     private static int[] optimal2(int[] nums) {
@@ -68,7 +68,7 @@ public class _005_Rearrange_Array_Elements_by_Sign {
     }
 
     /**
-     * time O(2N) space O(2N)
+     * time O(2n) space O(2n)
      */
     private static int[] bruteForce(int[] nums) {
         int[] positives = new int[nums.length];
