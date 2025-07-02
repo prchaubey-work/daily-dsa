@@ -1,5 +1,8 @@
 package dsa.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _005_Rearrange_Array_Elements_by_Sign {
 
     public static int[] rearrangeArray(int[] nums) {
@@ -22,6 +25,45 @@ public class _005_Rearrange_Array_Elements_by_Sign {
                 negIndex += 2;
             }
         }
+        return result;
+    }
+
+    /**
+     *
+     * when # of +ve and -ve are not equal
+     */
+    private static int[] optimal2(int[] nums) {
+        List<Integer> positives = new ArrayList<>();
+        List<Integer> negatives = new ArrayList<>();
+
+        // Separate into positive and negative lists
+        for (int num : nums) {
+            if (num >= 0) {
+                positives.add(num);
+            } else {
+                negatives.add(num);
+            }
+        }
+
+        int p = 0, n = 0, i = 0;
+        int[] result = new int[nums.length];
+
+        // Alternate placement
+        while (p < positives.size() && n < negatives.size()) {
+            result[i++] = positives.get(p++);
+            result[i++] = negatives.get(n++);
+        }
+
+        // Append remaining positives
+        while (p < positives.size()) {
+            result[i++] = positives.get(p++);
+        }
+
+        // Append remaining negatives
+        while (n < negatives.size()) {
+            result[i++] = negatives.get(n++);
+        }
+
         return result;
     }
 
